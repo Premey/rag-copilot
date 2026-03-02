@@ -1,0 +1,10 @@
+{
+    "doc_id": "doc_004",
+    "title": "Managing API Keys",
+    "tags": [
+        "api",
+        "developer",
+        "security"
+    ],
+    "content": "CloudDesk API keys allow you to authenticate programmatic requests.\n\n**Creating a Key:**\n1. Go to Settings → Developer → API Keys.\n2. Click 'Generate New Key'.\n3. Name your key (e.g., 'Production App').\n4. Copy and store the key immediately — it is shown only once.\n\n**Regenerating a Key:**\n1. Go to Settings → Developer → API Keys.\n2. Click 'Regenerate' next to the key you want to replace.\n3. Confirm — the old key is immediately invalidated.\n4. Update all apps using the old key.\n\n**Revoking a Key:**\nClick 'Revoke' and confirm. The key is immediately deactivated.\n\nEach workspace supports up to 10 active API keys. Keys do not expire but should be rotated every 90 days as a security best practice."
+}

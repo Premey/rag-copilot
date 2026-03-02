@@ -1,0 +1,10 @@
+{
+    "doc_id": "doc_014",
+    "title": "Dashboard & Reports",
+    "tags": [
+        "dashboard",
+        "analytics",
+        "reporting"
+    ],
+    "content": "The CloudDesk Dashboard gives a real-time overview of your support operations.\n\n**Key Metrics Displayed:**\n- Open Tickets (by priority)\n- Avg First Response Time\n- Avg Resolution Time\n- SLA Breach Rate (%)\n- Agent Performance (tickets closed per agent)\n- CSAT Score (if surveys enabled)\n\n**Custom Reports:**\n1. Click 'Reports' in the sidebar.\n2. Choose a template: Ticket Volume, SLA Compliance, Agent Performance, Customer Satisfaction.\n3. Set date range and filters.\n4. Export as CSV or PDF.\n\n**Scheduled Reports:**\nAutomate report delivery: Reports → Schedule → Choose frequency (daily/weekly/monthly) → Enter recipient emails.\n\n**Dashboard Widgets:**\nCustomize your Dashboard layout by clicking 'Edit Layout' — drag and resize widgets to your preference."
+}

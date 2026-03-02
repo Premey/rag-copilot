@@ -1,0 +1,10 @@
+{
+    "doc_id": "doc_006",
+    "title": "GitHub Integration Setup",
+    "tags": [
+        "integration",
+        "github",
+        "developer"
+    ],
+    "content": "Link CloudDesk with GitHub to track issues and pull requests alongside support tickets.\n\n**Setup:**\n1. Settings → Integrations → GitHub → Connect.\n2. Authorize CloudDesk on GitHub — choose which repos to link.\n3. Map GitHub repos to CloudDesk projects.\n4. Configure sync rules: link PRs to tickets by mentioning ticket IDs (e.g., [CD-123] in commit messages).\n\n**What Syncs:**\n- GitHub Issues ↔ CloudDesk Tickets (bidirectional)\n- PR status updates posted to linked tickets\n- Commit messages containing ticket IDs auto-link\n\n**Disconnecting:** Settings → Integrations → GitHub → Disconnect. Existing links remain but stop syncing."
+}

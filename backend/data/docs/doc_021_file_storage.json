@@ -1,0 +1,10 @@
+{
+    "doc_id": "doc_021",
+    "title": "File Storage & Attachments",
+    "tags": [
+        "storage",
+        "files",
+        "attachments"
+    ],
+    "content": "CloudDesk allows you to attach files to tickets, comments, and knowledge base articles.\n\n**Supported File Types:** Images (PNG, JPG, GIF, WebP), Documents (PDF, DOCX, XLSX, CSV), Archives (ZIP), Logs (TXT, LOG).\n\n**Size Limits:**\n- Starter: 10MB per file, 1GB total storage\n- Pro: 25MB per file, 50GB total storage\n- Enterprise: 100MB per file, Unlimited storage\n\n**Attaching Files:**\n- In a ticket reply: click the paperclip icon or drag and drop files.\n- Maximum 10 files per comment.\n\n**Storage Usage:**\nSettings → Billing → Storage to see your current usage and breakdown by team.\n\n**Deleting Attachments:**\nOpen the attachment → click the trash icon → confirm. Deleted attachments cannot be recovered. Storage is freed within 24 hours."
+}

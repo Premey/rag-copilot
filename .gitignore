@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+.env
+*.egg-info/
+dist/
+build/
+
+# Node / Frontend
+node_modules/
+dist/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database files
+*.db
+
+# ChromaDB
+.chroma/
+
+# Pytest
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Test output logs
+pytest_*.txt
+eval_output.txt
+
+# Gemini agent artifacts
+.gemini/

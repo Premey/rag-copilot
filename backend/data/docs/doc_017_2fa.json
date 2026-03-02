@@ -1,0 +1,10 @@
+{
+    "doc_id": "doc_017",
+    "title": "Two-Factor Authentication (2FA)",
+    "tags": [
+        "security",
+        "2fa",
+        "authentication"
+    ],
+    "content": "Two-Factor Authentication adds an extra layer of security to your account.\n\n**Enabling 2FA:**\n1. Settings → Security → Two-Factor Authentication → Enable.\n2. Scan the QR code with an authenticator app (Google Authenticator, Authy, 1Password).\n3. Enter the 6-digit code to confirm setup.\n4. Save your backup codes in a secure location — these are one-time-use codes if you lose your device.\n\n**Logging In with 2FA:**\nAfter entering your password, you'll be prompted for your 6-digit TOTP code.\n\n**Disabling 2FA:**\nSettings → Security → 2FA → Disable. You'll need to enter your password and a valid TOTP code to confirm.\n\n**Lost Your Device?**\nUse a backup code. If you've lost all backup codes, contact support@clouddesk.io with identity verification."
+}

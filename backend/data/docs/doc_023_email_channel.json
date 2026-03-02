@@ -1,0 +1,10 @@
+{
+    "doc_id": "doc_023",
+    "title": "Email Channel Setup",
+    "tags": [
+        "email",
+        "channel",
+        "setup"
+    ],
+    "content": "Turn any support email address into a CloudDesk inbox — every email becomes a ticket automatically.\n\n**Setting Up Email Channel:**\n1. Settings → Channels → Email → New Email Channel.\n2. Choose setup type:\n   - **CloudDesk address:** Use a provided address like `support@yourcompany.clouddesk.io` (zero config)\n   - **Custom domain:** Forward your own domain (e.g., `help@yourdomain.com`) to CloudDesk\n3. For custom domain: Copy the forwarding address given and set it in your email provider's forwarding rules.\n4. Set a default team and ticket category for incoming emails.\n5. Click Verify & Save.\n\n**How It Works:**\n- Incoming emails → new tickets with sender as contact\n- Agent replies sent from the ticket are delivered as emails to the customer\n- Email threads are kept together on the same ticket via Message-ID headers\n\n**DKIM / SPF (Custom Domain):**\nAdd the provided DNS records to your domain to ensure replies land in inboxes (not spam)."
+}

@@ -1,0 +1,124 @@
+{
+    "eval_set": [
+        {
+            "id": 1,
+            "question": "How do I reset my API key?",
+            "expected_doc": "doc_005",
+            "answerable": true
+        },
+        {
+            "id": 2,
+            "question": "What are the billing plans available?",
+            "expected_doc": "doc_002",
+            "answerable": true
+        },
+        {
+            "id": 3,
+            "question": "How do I reset my password?",
+            "expected_doc": "doc_003",
+            "answerable": true
+        },
+        {
+            "id": 4,
+            "question": "What are the SLA response times for critical tickets?",
+            "expected_doc": "doc_010",
+            "answerable": true
+        },
+        {
+            "id": 5,
+            "question": "How do I enable two-factor authentication?",
+            "expected_doc": "doc_009",
+            "answerable": true
+        },
+        {
+            "id": 6,
+            "question": "What are the API rate limits?",
+            "expected_doc": "doc_007",
+            "answerable": true
+        },
+        {
+            "id": 7,
+            "question": "How do I set up GitHub integration?",
+            "expected_doc": "doc_006",
+            "answerable": true
+        },
+        {
+            "id": 8,
+            "question": "How do webhooks work in CloudDesk?",
+            "expected_doc": "doc_022",
+            "answerable": true
+        },
+        {
+            "id": 9,
+            "question": "How do I configure Slack notifications?",
+            "expected_doc": "doc_011",
+            "answerable": true
+        },
+        {
+            "id": 10,
+            "question": "What is the refund and cancellation policy?",
+            "expected_doc": "doc_002",
+            "answerable": true
+        },
+        {
+            "id": 11,
+            "question": "How do I export my data for GDPR?",
+            "expected_doc": "doc_020",
+            "answerable": true
+        },
+        {
+            "id": 12,
+            "question": "How do I create automation rules for ticket routing?",
+            "expected_doc": "doc_015",
+            "answerable": true
+        },
+        {
+            "id": 13,
+            "question": "What happens when no agents are online in live chat?",
+            "expected_doc": "doc_024",
+            "answerable": true
+        },
+        {
+            "id": 14,
+            "question": "How do I set up SSO with SAML?",
+            "expected_doc": "doc_018",
+            "answerable": true
+        },
+        {
+            "id": 15,
+            "question": "What is CloudDesk and how do I get started?",
+            "expected_doc": "doc_001",
+            "answerable": true
+        },
+        {
+            "id": 16,
+            "question": "What is the weather in Tokyo today?",
+            "expected_doc": null,
+            "answerable": false
+        },
+        {
+            "id": 17,
+            "question": "Who won the 2024 Super Bowl?",
+            "expected_doc": null,
+            "answerable": false
+        },
+        {
+            "id": 18,
+            "question": "How do I cook pasta carbonara?",
+            "expected_doc": null,
+            "answerable": false
+        },
+        {
+            "id": 19,
+            "question": "What is quantum computing?",
+            "expected_doc": null,
+            "answerable": false
+        },
+        {
+            "id": 20,
+            "question": "Tell me about the history of dinosaurs",
+            "expected_doc": null,
+            "answerable": false
+        }
+    ]
+}

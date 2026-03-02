@@ -1,0 +1,10 @@
+{
+    "doc_id": "doc_007",
+    "title": "API Rate Limits",
+    "tags": [
+        "api",
+        "rate-limits",
+        "developer"
+    ],
+    "content": "CloudDesk API enforces rate limits to ensure platform stability.\n\n**Limits by Plan:**\n- Starter: 60 requests/minute, 1,000/day\n- Pro: 300 requests/minute, 10,000/day\n- Enterprise: Custom limits, contact sales\n\n**Headers Returned:**\n- X-RateLimit-Limit: your plan's per-minute limit\n- X-RateLimit-Remaining: requests left in current window\n- X-RateLimit-Reset: Unix timestamp when window resets\n\n**When Exceeded:**\nHTTP 429 Too Many Requests is returned. Retry after the time indicated in the Retry-After response header.\n\n**Best Practices:**\n- Implement exponential backoff on 429 responses\n- Cache responses where possible\n- Use webhooks instead of polling for event-driven use cases"
+}

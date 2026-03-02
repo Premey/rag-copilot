@@ -1,0 +1,10 @@
+{
+    "doc_id": "doc_002",
+    "title": "Billing & Subscription Plans",
+    "tags": [
+        "billing",
+        "pricing",
+        "subscription"
+    ],
+    "content": "CloudDesk offers three plans:\n\n**Starter (Free):** Up to 3 users, 5 integrations, 1GB storage.\n**Pro ($29/user/month):** Unlimited users, all integrations, 50GB storage, priority support.\n**Enterprise (Custom):** SSO, custom contracts, SLA guarantees, dedicated support.\n\nBilling cycles: Monthly or Annual (20% discount on annual).\n\nTo upgrade: Settings → Billing → Change Plan → Select tier → Enter payment details → Confirm.\n\nInvoices are emailed on the 1st of each billing month and available under Settings → Billing → Invoice History.\n\nRefund policy: Refunds are available within 14 days of a charge for annual plans if you have not used more than 10% of resources."
+}

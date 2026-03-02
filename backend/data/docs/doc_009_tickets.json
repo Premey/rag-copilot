@@ -1,0 +1,10 @@
+{
+    "doc_id": "doc_009",
+    "title": "Creating and Managing Tickets",
+    "tags": [
+        "tickets",
+        "workflow",
+        "support"
+    ],
+    "content": "CloudDesk tickets track customer issues from creation to resolution.\n\n**Creating a Ticket:**\n1. Click 'New Ticket' from the Dashboard.\n2. Fill in: Title, Description, Priority (Low/Medium/High/Critical), Category, Assignee.\n3. Attach files up to 25MB.\n4. Click Submit — ticket gets a unique ID (e.g., CD-1042).\n\n**Ticket Statuses:**\n- Open → In Progress → Pending Customer → Resolved → Closed\n\n**Updating a Ticket:**\nClick the ticket ID → Edit fields → Save. All changes are logged in the Activity Feed.\n\n**Bulk Actions:**\nSelect multiple tickets → Actions menu → Assign, Change Status, or Add Tag.\n\n**SLA Timers:**\nSLA countdown starts when a ticket is created. Breached tickets are highlighted red on the Dashboard."
+}

@@ -1,0 +1,10 @@
+{
+    "doc_id": "doc_020",
+    "title": "Canned Responses & Templates",
+    "tags": [
+        "productivity",
+        "templates",
+        "responses"
+    ],
+    "content": "Canned responses are pre-written reply templates that agents can insert with one click — saving time on common replies.\n\n**Creating a Canned Response:**\n1. Settings → Canned Responses → New.\n2. Enter a short-code (e.g., 'billing-inquiry') — agents type this to trigger it.\n3. Write the full response body. Use placeholders: {{customer_name}}, {{ticket_id}}, {{agent_name}}.\n4. Assign to a category (optional) and click Save.\n\n**Using Canned Responses:**\nIn the ticket reply box, type '/' or the short-code → a dropdown shows matching canned responses → click to insert.\n\n**Sharing Canned Responses:**\nBy default, canned responses are personal. Admins can mark them as 'Shared' — visible to all agents.\n\n**Bulk Import:**\nAdmins can bulk upload via CSV: Settings → Canned Responses → Import. CSV format: shortcode, title, body."
+}

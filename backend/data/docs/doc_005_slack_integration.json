@@ -1,0 +1,10 @@
+{
+    "doc_id": "doc_005",
+    "title": "Slack Integration Setup",
+    "tags": [
+        "integration",
+        "slack",
+        "notifications"
+    ],
+    "content": "Connect CloudDesk to Slack to receive real-time notifications in your channels.\n\n**Setup Steps:**\n1. Go to Settings → Integrations → Slack.\n2. Click 'Connect to Slack'.\n3. Authorize CloudDesk in the Slack OAuth dialog — select your workspace.\n4. Choose a default notification channel (e.g., #clouddesk-alerts).\n5. Configure which events trigger notifications: new tickets, status changes, mentions, SLA breaches.\n6. Click Save.\n\n**Posting Notifications:**\nCloudDesk will post a formatted message to your chosen channel whenever a configured event occurs.\n\n**Disconnecting:**\nSettings → Integrations → Slack → Disconnect. This removes all webhooks. Your Slack messages are not deleted.\n\nNote: You need Slack workspace admin permissions to authorize the integration."
+}

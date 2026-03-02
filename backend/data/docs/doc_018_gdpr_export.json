@@ -1,0 +1,11 @@
+{
+    "doc_id": "doc_018",
+    "title": "Data Export & GDPR",
+    "tags": [
+        "gdpr",
+        "data",
+        "compliance",
+        "export"
+    ],
+    "content": "CloudDesk supports full data portability and GDPR compliance.\n\n**Exporting Your Data:**\n1. Settings → Privacy → Export Data.\n2. Choose scope: All data, Tickets only, Contacts only.\n3. Click 'Request Export'. You'll receive an email with a download link within 2 hours.\n4. Download the ZIP containing JSON exports of all records.\n\n**GDPR Rights:**\n- Right to Access: Use the export feature above.\n- Right to Erasure: Settings → Privacy → Delete Account. All personal data deleted within 30 days.\n- Right to Portability: Data exports in JSON format.\n- Data Processing Agreements (DPAs) available for Enterprise customers.\n\n**Data Retention:**\nClosed tickets are retained for 2 years by default. Configure custom retention under Settings → Privacy → Data Retention.\n\n**Contact:**\nFor GDPR requests: privacy@clouddesk.io"
+}

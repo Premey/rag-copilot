@@ -1,0 +1,10 @@
+{
+    "doc_id": "doc_016",
+    "title": "CSAT Surveys & Customer Feedback",
+    "tags": [
+        "csat",
+        "feedback",
+        "reporting"
+    ],
+    "content": "Customer Satisfaction (CSAT) surveys let you measure how happy customers are after ticket resolution.\n\n**Enabling CSAT:**\nSettings → CSAT → Enable. Choose when surveys are sent: On ticket close, or 1 hour after resolution.\n\n**Survey Format:**\nCustomers receive an email: 'Was your issue resolved? Rate us: 👍 / 👎' with an optional comment box.\n\n**Viewing Results:**\nDashboard → CSAT widget. Reports → CSAT Report for detailed breakdown by agent, team, category, and date range.\n\n**CSAT Score Calculation:**\n(Positive responses / Total responses) × 100. Industry benchmark: >80% is good.\n\n**Custom Questions:**\nPro and Enterprise plans support custom survey questions and branding. Settings → CSAT → Customize Survey."
+}

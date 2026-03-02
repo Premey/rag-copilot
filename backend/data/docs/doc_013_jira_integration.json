@@ -1,0 +1,10 @@
+{
+    "doc_id": "doc_013",
+    "title": "Jira Integration",
+    "tags": [
+        "integration",
+        "jira",
+        "project-management"
+    ],
+    "content": "Sync CloudDesk tickets with Jira issues for seamless engineering handoffs.\n\n**Setup:**\n1. Settings → Integrations → Jira → Connect.\n2. Enter your Jira Cloud domain (e.g., yourcompany.atlassian.net).\n3. Authorize via Atlassian OAuth.\n4. Map CloudDesk projects to Jira projects.\n5. Set sync direction: one-way (CD → Jira) or bidirectional.\n\n**Sync Behavior:**\n- CloudDesk ticket status changes reflect in linked Jira issues.\n- Comments sync bidirectionally.\n- Attachments sync from CloudDesk to Jira.\n\n**Linking Manually:**\nInside any ticket, use 'Link to Jira Issue' to attach an existing Jira issue by key (e.g., PROJ-456).\n\n**Troubleshooting:**\nIf sync stops, re-authorize from Settings → Integrations → Jira. Atlassian OAuth tokens expire every 90 days."
+}

@@ -1,0 +1,10 @@
+{
+    "doc_id": "doc_024",
+    "title": "Live Chat Widget Setup",
+    "tags": [
+        "live-chat",
+        "widget",
+        "channel"
+    ],
+    "content": "Add a live chat widget to your website so customers can chat with your team in real time.\n\n**Installing the Widget:**\n1. Settings → Channels → Live Chat → New Widget.\n2. Customize: name, color, greeting message, operating hours.\n3. Copy the JavaScript snippet provided.\n4. Paste it before the `</body>` tag on your website.\n5. Verify the widget appears on your site — it shows as a bubble in the bottom-right corner.\n\n**Operating Hours:**\nSet hours when agents are available. Outside hours, the widget shows an offline message and collects email for async follow-up.\n\n**Chat Routing:**\nAssign chats to a specific team or use round-robin to distribute evenly across online agents.\n\n**Offline Fallback:**\nWhen no agents are online, the widget converts to a contact form. Submissions create tickets automatically.\n\n**Mobile Support:**\nThe widget is fully responsive and works on mobile browsers. Native mobile SDK available for iOS and Android (Enterprise plan)."
+}

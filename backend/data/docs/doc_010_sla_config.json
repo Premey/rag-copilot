@@ -1,0 +1,10 @@
+{
+    "doc_id": "doc_010",
+    "title": "SLA Configuration",
+    "tags": [
+        "sla",
+        "workflow",
+        "enterprise"
+    ],
+    "content": "Service Level Agreements (SLAs) define response and resolution time targets for tickets.\n\n**Default SLA Targets:**\n- Critical: First response 1hr, Resolution 4hr\n- High: First response 4hr, Resolution 24hr\n- Medium: First response 8hr, Resolution 72hr\n- Low: First response 24hr, Resolution 168hr (7 days)\n\n**Custom SLA Policies:**\n1. Settings → SLA Policies → New Policy.\n2. Define conditions (e.g., priority, category, customer tier).\n3. Set response and resolution targets.\n4. Assign to a team or project.\n\n**Business Hours:**\nSLA timers can be paused outside business hours. Configure under Settings → SLA → Business Hours.\n\n**Breach Alerts:**\nWhen an SLA is about to breach (30 min warning), the assigned agent and team lead receive a notification."
+}

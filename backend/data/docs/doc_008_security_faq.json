@@ -1,0 +1,10 @@
+{
+    "doc_id": "doc_008",
+    "title": "Security FAQ",
+    "tags": [
+        "security",
+        "compliance",
+        "faq"
+    ],
+    "content": "**Is CloudDesk SOC 2 compliant?** Yes, CloudDesk is SOC 2 Type II certified. Reports available on request for Enterprise customers.\n\n**Is data encrypted?** All data is encrypted at rest (AES-256) and in transit (TLS 1.2+).\n\n**Where is data stored?** Data is stored in AWS us-east-1 by default. EU data residency available on Enterprise plans.\n\n**Can I use SSO?** Yes, SAML 2.0 / OIDC SSO is available on Enterprise plans. Supports Okta, Azure AD, Google Workspace.\n\n**How do I report a security vulnerability?** Email security@clouddesk.io with details. We follow responsible disclosure and respond within 48 hours.\n\n**Are API keys logged?** API key usage is logged and visible under Settings → Developer → Audit Logs."
+}

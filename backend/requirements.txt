@@ -1,0 +1,21 @@
+fastapi==0.115.0
+uvicorn[standard]==0.29.0
+sqlalchemy==2.0.36
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+python-multipart==0.0.9
+python-dotenv==1.0.1
+pydantic[email]==2.7.1
+pydantic-settings==2.3.4
+httpx==0.28.1
+pytest==8.2.2
+pytest-asyncio==0.23.8
+anyio==4.12.1
+# Day 3 — RAG pipeline
+sentence-transformers==3.0.1
+faiss-cpu
+numpy
+langchain-text-splitters==0.2.2
+# Day 4 — LLM
+google-genai>=1.0.0
