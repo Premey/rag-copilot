@@ -6,7 +6,7 @@ RAG API routes:
   GET  /rag/metrics  — observability counters
 """
 import uuid
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from fastapi import APIRouter, Depends
 
@@ -39,7 +39,7 @@ def ingest(
         chunks_created=result["chunks_created"],
         collection=result.get("collection", "rag_copilot_docs"),
         duration_seconds=result["duration_seconds"],
-        timestamp=datetime.now(timezone.utc).isoformat(),
+        timestamp=datetime.now(UTC).isoformat(),
     )
 
 

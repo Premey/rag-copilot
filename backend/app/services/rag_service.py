@@ -17,13 +17,14 @@ import pickle
 import time
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any
 
 import numpy as np
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from app.core.config import settings
-from app.core.embeddings import embed_texts, embed_query as _embed_query
+from app.core.embeddings import embed_query as _embed_query
+from app.core.embeddings import embed_texts
 from app.schemas.rag import ChunkResult
 
 logger = logging.getLogger("rag-copilot")
@@ -39,11 +40,11 @@ def _index_path() -> str:
 @dataclass
 class VectorIndex:
     """Simple in-memory vector index persisted to disk via pickle."""
-    chunk_ids: List[str] = field(default_factory=list)
-    doc_ids: List[str] = field(default_factory=list)
-    titles: List[str] = field(default_factory=list)
-    texts: List[str] = field(default_factory=list)
-    vectors: Optional[np.ndarray] = None  # shape: (N, D)
+    chunk_ids: list[str] = field(default_factory=list)
+    doc_ids: list[str] = field(default_factory=list)
+    titles: list[str] = field(default_factory=list)
+    texts: list[str] = field(default_factory=list)
+    vectors: np.ndarray | None = None  # shape: (N, D)
 
     def size(self) -> int:
         return len(self.chunk_ids)
@@ -58,7 +59,7 @@ def _save_index(index: VectorIndex) -> None:
     logger.info("Index saved to %s (%d chunks)", path, index.size())
 
 
-def _load_index() -> Optional[VectorIndex]:
+def _load_index() -> VectorIndex | None:
     """Load index from disk. Returns None if not found."""
     path = _index_path()
     if not os.path.exists(path):
@@ -69,7 +70,7 @@ def _load_index() -> Optional[VectorIndex]:
 
 # ─── Phase 1: Load Documents ─────────────────────────────────────────────────
 
-def load_docs(docs_path: str) -> List[Dict[str, str]]:
+def load_docs(docs_path: str) -> list[dict[str, str]]:
     """
     Read all .json and .md files from docs_path.
     Returns list of dicts: {doc_id, title, content}
@@ -110,7 +111,7 @@ def load_docs(docs_path: str) -> List[Dict[str, str]]:
 
 # ─── Phase 2: Chunk Documents ────────────────────────────────────────────────
 
-def chunk_docs(docs: List[Dict[str, str]]) -> List[Dict[str, Any]]:
+def chunk_docs(docs: list[dict[str, str]]) -> list[dict[str, Any]]:
     """
     Split each document into overlapping chunks.
     Returns list of: {chunk_id, doc_id, title, chunk_text}
@@ -138,7 +139,7 @@ def chunk_docs(docs: List[Dict[str, str]]) -> List[Dict[str, Any]]:
 
 # ─── Phase 3+4: Embed + Persist ──────────────────────────────────────────────
 
-def ingest(force_rebuild: bool = True) -> Dict[str, Any]:
+def ingest(force_rebuild: bool = True) -> dict[str, Any]:
     """
     Full ingestion pipeline: load → chunk → embed → build BM25 → save index.
     """
@@ -214,7 +215,7 @@ def _load_bm25():
 
 # ─── Phase 5: Hybrid Retrieve (Embedding + BM25) ─────────────────────────────
 
-def retrieve(question: str, top_k: int = None) -> List[ChunkResult]:
+def retrieve(question: str, top_k: int = None) -> list[ChunkResult]:
     """
     Hybrid retrieval: combine embedding cosine similarity and BM25 keyword scores.
     Final score = (1 - BM25_WEIGHT) * embedding_score + BM25_WEIGHT * bm25_score_normalized
@@ -270,7 +271,7 @@ def retrieve(question: str, top_k: int = None) -> List[ChunkResult]:
 
 # ─── Phase 6: Ask (Retrieve + Guardrails + LLM) ──────────────────────────────
 
-def ask(question: str, top_k: int = None, conversation_id: str = None) -> Dict[str, Any]:
+def ask(question: str, top_k: int = None, conversation_id: str = None) -> dict[str, Any]:
     """
     Full RAG ask pipeline with guardrails:
       1. Hybrid retrieve (embedding + BM25)
@@ -280,6 +281,7 @@ def ask(question: str, top_k: int = None, conversation_id: str = None) -> Dict[s
       5. Record metrics
     """
     import uuid
+
     from app.core.llm import generate_answer
     from app.core.metrics import metrics
 

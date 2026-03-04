@@ -9,17 +9,17 @@ Features:
   - RAG routes: POST /rag/ingest, POST /rag/retrieve
   - Auto-creates DB tables on startup
 """
-import time
 import logging
-from datetime import datetime, timezone
+import time
+from datetime import UTC, datetime
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.core.config import settings
-from app.core.database import Base, engine
 from app.api.auth import router as auth_router
 from app.api.rag import router as rag_router
+from app.core.config import settings
+from app.core.database import Base, engine
 
 # ─── Logging Setup ────────────────────────────────────────────────────────────
 logging.basicConfig(
@@ -39,9 +39,14 @@ app = FastAPI(
 )
 
 # ─── CORS ─────────────────────────────────────────────────────────────────────
+# Support comma-separated origins for deployment flexibility
+_origins = [o.strip() for o in settings.FRONTEND_ORIGIN.split(",") if o.strip()]
+if "http://localhost:3000" not in _origins:
+    _origins.append("http://localhost:3000")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[settings.FRONTEND_ORIGIN, "http://localhost:3000"],
+    allow_origins=_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -82,5 +87,5 @@ def health():
     return {
         "status": "ok",
         "version": "1.0.0",
-        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "timestamp": datetime.now(UTC).isoformat(),
     }

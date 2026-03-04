@@ -7,7 +7,6 @@ and returns the generated text.
 To use: set GOOGLE_API_KEY in .env (free at https://aistudio.google.com/apikey)
 """
 import logging
-from typing import Optional
 
 from google import genai
 from google.genai import types
@@ -17,7 +16,7 @@ from app.core.config import settings
 logger = logging.getLogger("rag-copilot")
 
 # Module-level Gemini client (lazy-initialized)
-_client: Optional[genai.Client] = None
+_client: genai.Client | None = None
 
 
 def _get_client() -> genai.Client:
@@ -48,8 +47,8 @@ Be concise and cite which part of the context you used."""
 def generate_answer(
     question: str,
     context: str,
-    temperature: Optional[float] = None,
-    max_tokens: Optional[int] = None,
+    temperature: float | None = None,
+    max_tokens: int | None = None,
 ) -> str:
     """
     Send a prompt (system + context + question) to Gemini and return the answer text.

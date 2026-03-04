@@ -2,15 +2,16 @@
 Day 5 tests: BM25 hybrid retrieval, guardrails, metrics, and eval harness.
 """
 import os
+from unittest.mock import patch
+
 import pytest
 import pytest_asyncio
-from unittest.mock import patch
-from httpx import AsyncClient, ASGITransport
+from httpx import ASGITransport, AsyncClient
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from app.main import app
 from app.core.database import Base, get_db
+from app.main import app
 
 TEST_DATABASE_URL = "sqlite:///./test_clouddesk_day5.db"
 test_engine = create_engine(TEST_DATABASE_URL, connect_args={"check_same_thread": False})

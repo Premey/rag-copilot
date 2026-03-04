@@ -4,12 +4,12 @@ Uses an in-memory SQLite database so tests are isolated and fast.
 """
 import pytest
 import pytest_asyncio
-from httpx import AsyncClient, ASGITransport
+from httpx import ASGITransport, AsyncClient
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from app.main import app
 from app.core.database import Base, get_db
+from app.main import app
 
 # ─── In-memory test DB ────────────────────────────────────────────────────────
 TEST_DATABASE_URL = "sqlite:///./test_clouddesk.db"

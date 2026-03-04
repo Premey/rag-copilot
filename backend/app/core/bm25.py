@@ -5,10 +5,8 @@ No external dependencies beyond Python stdlib + numpy.
 import math
 import re
 from collections import Counter
-from typing import Dict, List, Optional, Tuple
 
 import numpy as np
-
 
 # ─── Tokenizer ────────────────────────────────────────────────────────────────
 
@@ -27,7 +25,7 @@ _STOP_WORDS = frozenset({
 })
 
 
-def _tokenize(text: str) -> List[str]:
+def _tokenize(text: str) -> list[str]:
     """Lowercase, strip punctuation, remove stop words."""
     tokens = re.findall(r"\b[a-z0-9]+\b", text.lower())
     return [t for t in tokens if t not in _STOP_WORDS and len(t) > 1]
@@ -43,12 +41,12 @@ class BM25Index:
         self.b = b
         self.corpus_size: int = 0
         self.avg_dl: float = 0.0
-        self.doc_freqs: Dict[str, int] = {}      # term → # docs containing it
-        self.doc_lens: List[int] = []             # length of each doc
-        self.term_freqs: List[Dict[str, int]] = []  # per-doc term frequencies
-        self.idf: Dict[str, float] = {}
+        self.doc_freqs: dict[str, int] = {}      # term → # docs containing it
+        self.doc_lens: list[int] = []             # length of each doc
+        self.term_freqs: list[dict[str, int]] = []  # per-doc term frequencies
+        self.idf: dict[str, float] = {}
 
-    def fit(self, documents: List[str]) -> "BM25Index":
+    def fit(self, documents: list[str]) -> "BM25Index":
         """Build the BM25 index from a list of document strings."""
         self.corpus_size = len(documents)
         self.doc_freqs = {}
@@ -75,7 +73,7 @@ class BM25Index:
 
         return self
 
-    def query(self, question: str, top_k: int = 5) -> List[Tuple[int, float]]:
+    def query(self, question: str, top_k: int = 5) -> list[tuple[int, float]]:
         """
         Score all documents against the query.
         Returns list of (doc_index, score) sorted by score descending, top-k only.

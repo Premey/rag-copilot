@@ -6,15 +6,16 @@ Tests are split into two categories:
   2. Integration tests that require GOOGLE_API_KEY (optional, skipped if no key)
 """
 import os
+from unittest.mock import patch
+
 import pytest
 import pytest_asyncio
-from unittest.mock import patch
-from httpx import AsyncClient, ASGITransport
+from httpx import ASGITransport, AsyncClient
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from app.main import app
 from app.core.database import Base, get_db
+from app.main import app
 
 # ─── Test DB setup ────────────────────────────────────────────────────────────
 TEST_DATABASE_URL = "sqlite:///./test_clouddesk_ask.db"

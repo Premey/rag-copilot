@@ -3,8 +3,8 @@ Metrics store — simple in-memory counters for /rag/metrics.
 Thread-safe via threading.Lock.
 """
 import threading
-from datetime import datetime, timezone
-from typing import Dict, Any
+from datetime import UTC, datetime
+from typing import Any
 
 
 class MetricsStore:
@@ -21,7 +21,7 @@ class MetricsStore:
             "total_top_score": 0.0,
             "ingest_count": 0,
         }
-        self._started_at = datetime.now(timezone.utc).isoformat()
+        self._started_at = datetime.now(UTC).isoformat()
 
     def record_query(self, status: str, latency_ms: int, top_score: float):
         with self._lock:
@@ -39,7 +39,7 @@ class MetricsStore:
         with self._lock:
             self._counters["ingest_count"] += 1
 
-    def snapshot(self) -> Dict[str, Any]:
+    def snapshot(self) -> dict[str, Any]:
         with self._lock:
             total = self._counters["total_queries"]
             return {

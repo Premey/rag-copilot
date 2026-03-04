@@ -1,15 +1,13 @@
 from datetime import datetime
-from typing import List, Optional
 
 from pydantic import BaseModel, EmailStr, field_validator
-
 
 # ─── Request Schemas ──────────────────────────────────────────────────────────
 
 class SignupRequest(BaseModel):
     email: EmailStr
     password: str
-    full_name: Optional[str] = None
+    full_name: str | None = None
 
     @field_validator("password")
     @classmethod
@@ -29,7 +27,7 @@ class LoginRequest(BaseModel):
 class UserOut(BaseModel):
     user_id: str
     email: str
-    full_name: Optional[str]
+    full_name: str | None
     created_at: datetime
 
     model_config = {"from_attributes": True}
@@ -45,7 +43,7 @@ class TokenResponse(BaseModel):
 class MeResponse(BaseModel):
     user_id: str
     email: str
-    full_name: Optional[str]
+    full_name: str | None
     created_at: datetime
 
     model_config = {"from_attributes": True}

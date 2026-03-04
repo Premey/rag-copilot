@@ -3,15 +3,15 @@ Test suite for RAG pipeline: /rag/ingest and /rag/retrieve.
 Uses an in-memory test DB for auth + real ChromaDB on a temp path.
 """
 import os
-import shutil
+
 import pytest
 import pytest_asyncio
-from httpx import AsyncClient, ASGITransport
+from httpx import ASGITransport, AsyncClient
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from app.main import app
 from app.core.database import Base, get_db
+from app.main import app
 
 # ─── In-memory / test DB setup ────────────────────────────────────────────────
 TEST_DATABASE_URL = "sqlite:///./test_clouddesk_rag.db"

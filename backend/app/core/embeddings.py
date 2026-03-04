@@ -4,7 +4,6 @@ Free, runs fully locally — no API key required.
 384-dimensional vectors.
 """
 from functools import lru_cache
-from typing import List
 
 from sentence_transformers import SentenceTransformer
 
@@ -17,7 +16,7 @@ def get_embedding_model() -> SentenceTransformer:
     return SentenceTransformer(settings.EMBEDDING_MODEL)
 
 
-def embed_texts(texts: List[str]) -> List[List[float]]:
+def embed_texts(texts: list[str]) -> list[list[float]]:
     """
     Generate embeddings for a list of text strings.
     Returns a list of float vectors (one per text).
@@ -27,6 +26,6 @@ def embed_texts(texts: List[str]) -> List[List[float]]:
     return embeddings.tolist()
 
 
-def embed_query(text: str) -> List[float]:
+def embed_query(text: str) -> list[float]:
     """Generate embedding for a single query string."""
     return embed_texts([text])[0]

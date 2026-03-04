@@ -1,12 +1,8 @@
 """
 Pydantic schemas for RAG ingest, retrieve, and ask endpoints.
 """
-import uuid
-from datetime import datetime
-from typing import List, Optional
 
 from pydantic import BaseModel, field_validator
-
 
 # ─── Ingest ───────────────────────────────────────────────────────────────────
 
@@ -55,7 +51,7 @@ class ChunkResult(BaseModel):
 class RetrieveResponse(BaseModel):
     question: str
     top_k: int
-    results: List[ChunkResult]
+    results: list[ChunkResult]
     collection: str
     trace_id: str
 
@@ -65,7 +61,7 @@ class RetrieveResponse(BaseModel):
 class AskRequest(BaseModel):
     question: str
     top_k: int = 5
-    conversation_id: Optional[str] = None
+    conversation_id: str | None = None
 
     @field_validator("question")
     @classmethod
@@ -84,10 +80,10 @@ class AskRequest(BaseModel):
 
 class AskResponse(BaseModel):
     answer: str
-    sources: List[ChunkResult]
+    sources: list[ChunkResult]
     status: str  # "ok" | "low_context"
     trace_id: str
     question: str
-    conversation_id: Optional[str] = None
+    conversation_id: str | None = None
     model_used: str
     latency_ms: int

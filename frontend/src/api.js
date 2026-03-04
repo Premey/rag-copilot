@@ -3,7 +3,7 @@
  * Auth token is read from localStorage on each call.
  */
 
-const API_BASE = '';  // Vite proxy forwards /auth and /rag to localhost:8000
+const API_BASE = import.meta.env.VITE_API_URL || '';  // Set VITE_API_URL in production
 
 function getToken() {
     return localStorage.getItem('rag_token');
