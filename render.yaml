@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: rag-copilot-backend
+    runtime: docker
+    repo: https://github.com/Premey/rag-copilot.git
+    branch: main
+    rootDir: backend
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: FRONTEND_ORIGIN
+        value: https://frontend-e4eo22abp-premnaths-projects-71761afb.vercel.app
+      - key: DATABASE_URL
+        value: sqlite:///./clouddesk.db
+      - key: LLM_MODEL
+        value: gemini-2.0-flash
